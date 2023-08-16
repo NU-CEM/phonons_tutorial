@@ -1,7 +1,0 @@
-dict(compute_forces=True,
-     k_grid=[4, 4, 4],
-     output_level='MD_light',
-     relativistic='atomic_zora scalar',
-     sc_accuracy_rho=1e-06,
-     species_dir='/home/UNN/mynf8/TDEP_school/CdTe_harmonic_vibes/phonopy/basissets',
-     xc='pw-lda')

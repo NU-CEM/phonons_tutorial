@@ -9,6 +9,8 @@ Walkthrough for the ab-initio phonons tutorial at [TDEP 2023](https://liu.se/en/
 5. Calculate born effective charges and dielectric constant if required (see folder `CdTe_born`)
 6. Use the forces to build dynamical matrix and calculate property(s) of interest (e.g. `phonopy -p -s band.conf`)
 
+## Approach and software
+
 One of the strengths of the finite displacement method is that it is modular - so we can use various methods and tools for calculating the forces or post-processing results. In this case we use:
 
 - [phonopy](https://phonopy.github.io/phonopy/) to generate the supercell, build and post-process the force-constant tensor.
@@ -29,7 +31,13 @@ We also provide example input and output for [fhi-vibes](https://vibes-developer
 - Associated powerpoint presentation [here]().
 - fhi-aims walkthrough video [here]().
 
-### Folders
+### Following the tutorial
+
+`tutorial_clean`: You can follow along with each step of the walkthrough video using the input files in this folder. Due to time constraints we do not calculate the born effective charges or dielectric tensor, but use a pre-calculated `BORN` file. You will need [ASE](https://wiki.fysik.dtu.dk/ase/), phonopy and fhi-aims installed on your system. The conda dependencies can be found in `environment.yml`. We use mpi to run each calculation with 6 processes.
+
+### Input and output files for electronic structure calculations
+
+For those who may not be able to run the electronic structure calculations we provide the input and output files for each job. You can then post-process these using phonopy. Input and output files are provided for the born effective charge and dielectric calculations.
 
 `CdTe_relax`(Step 2) : Input and output file for unit cell relaxation.
 
@@ -40,8 +48,6 @@ We also provide example input and output for [fhi-vibes](https://vibes-developer
 `CdTe_dielectric` (Step 5): Input and output files to calculate the "ion-clamped" high-frequency dielectric tensor	$\epsilon_\infty$.
 
 `CdTe_harmonic_vibes` (FHI-aims only): Input and output files for calculating a phonon dispersion using fhi-vibes, which combines many of the steps above into a single workflow.
-
-`tutorial_clean`: Input files for only, for those who want to follow the tutorial video exactly. In this video we do not calculate the born effective charges or dielectric tensor, but use a pre-calculated `BORN` file. You will need [ASE](), phonopy and fhi-aims installed on your system. The conda dependencies can be found in `environment.yml`. In the tutorial we use mpirun to run each calculation with 6 processes.
 
 ### Other configuration files and scripts 
 

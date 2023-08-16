@@ -5,9 +5,9 @@ Walkthrough for the ab-initio phonons tutorial at [TDEP 2023](https://liu.se/en/
 1. Relax unit cell (see folder `CdTe_relax`)
 2. Build supercell and generate displacements (e.g. `phonopy -d --dim="2 2 2" --aims`)
 3. Calculate forces (see folder `CdTe_harmonic_phonons`)
-4. Build force constant tensor (e.g. `phonopy -f phonopy-FHI-aims-displacement-{001..004}/aims.out`)
+4. Extract forces (e.g. `phonopy -f phonopy-FHI-aims-displacement-{001..004}/aims.out`)
 5. Calculate born effective charges and dielectric constant if required (see folder `CdTe_born`)
-6. Use the force constant tensor to calculate property of interest (e.g. `phonopy -p -s --nac band.conf`)
+6. Use the forces to calculate property of interest (e.g. `phonopy -p -s --nac band.conf`)
 7. Plot results for  (e.g. `sumo-phonon-bandplot --filename FORCE_SETS --dim 2 2 2`)
 
 One of the strengths of the finite displacement method is that it is modular - so we can use various methods and tools for calculating the forces or post-processing results. In this case we use:
@@ -40,3 +40,5 @@ We also provide example input and output for [fhi-vibes](https://vibes-developer
 ### Other configuration files and scripts 
 
 `band.conf`: Phonopy configuration file for producing phonon dispersion (Step 6)
+`preprocessing_phonopy_aims.py`: setting up multiple folders for force calculations
+`run_multiple_jobs_aims.sh`: run multiple fhi-aims jobs in separate folders

@@ -31,12 +31,12 @@
 
 
 
-  Date     :  20230816, Time     :  133712.002
-  Time zero on CPU 1             :   0.252308000000000E+00  s.
-  Internal wall clock time zero  :           461425032.002  s.
+  Date     :  20230816, Time     :  210044.723
+  Time zero on CPU 1             :   0.243109000000000E+00  s.
+  Internal wall clock time zero  :           461451644.723  s.
 
   FHI-aims created a unique identifier for this run for later identification
-  aims_uuid : 5BA69D03-0CF7-4DAC-A383-D5264C5A4792
+  aims_uuid : 82BCC5CC-8C72-49AB-AF72-525BDABB9878
 
   Build configuration of the current instance of FHI-aims
   -------------------------------------------------------
@@ -86,7 +86,7 @@
   
   # for production level calculation use tight basis set
   xc                                 pbe
-  k_grid                             8 8 8
+  k_grid                             16 16 16
   sc_accuracy_rho                    1e-07
   relativistic                       atomic_zora scalar
   output_level                       MD_light
@@ -306,7 +306,7 @@
           Reading file control.in.
 ------------------------------------------------------------
   XC: Using PBE gradient-corrected functionals.
-  Found k-point grid:         8         8         8
+  Found k-point grid:        16        16        16
   Convergence accuracy of self-consistent charge density:  0.1000E-06
   Scalar relativistic treatment of kinetic energy: on-site free-atom approximation to ZORA.
   Requested output level: MD_light
@@ -398,7 +398,7 @@
   | Precision set to  0.1E-04
   | Number of Operations  : 1
   | Space group           : 1
-  | International         : P1
+  | International         : P1 2
   | Schoenflies           : C1^1
   Input structure read successfully.
   The structure contains        2 atoms,  and a total of        100.000 electrons.
@@ -738,8 +738,8 @@
   Preparing densities etc. for the partition functions (integrals / Hartree potential).
 
   Preparations completed.
-  max(cpu_time)          :      0.297 s.
-  Wall clock time (cpu1) :      0.297 s.
+  max(cpu_time)          :      0.498 s.
+  Wall clock time (cpu1) :      0.498 s.
 ------------------------------------------------------------
 
   Initializing index lists of integration centers etc. from given atomic structure:
@@ -747,16 +747,16 @@
 
   Initializing the k-points
   Using symmetry for reducing the k-points
-  | k-points reduced from:      512 to      260
-  | Number of k-points                             :       260
-  | Consuming       2080 KiB for k_phase_exx.
+  | k-points reduced from:     4096 to     2052
+  | Number of k-points                             :      2052
+  | Consuming     131328 KiB for k_phase_exx.
   The eigenvectors in the calculations are COMPLEX.
-  | K-points in task   0:        43
-  | K-points in task   1:        44
-  | K-points in task   2:        44
-  | K-points in task   3:        43
-  | K-points in task   4:        43
-  | K-points in task   5:        43
+  | K-points in task   0:       342
+  | K-points in task   1:       342
+  | K-points in task   2:       342
+  | K-points in task   3:       342
+  | K-points in task   4:       342
+  | K-points in task   5:       342
   | Number of basis functions in the Hamiltonian integrals :      1576
   | Number of basis functions in a single unit cell        :        86
   | Number of centers in hartree potential         :       594
@@ -765,7 +765,7 @@
   | Number of centers in basis integrals           :       148
   | Number of centers in integrals                 :        57
   | Number of centers in hamiltonian               :       124
-  | Consuming        284 KiB for k_phase.
+  | Consuming       2244 KiB for k_phase.
   | Number of super-cells (origin) [n_cells]                     :        1331
   | Number of super-cells (after PM_index) [n_cells]             :          70
   | Number of super-cells in hamiltonian [n_cells_in_hamiltonian]:          70
@@ -775,7 +775,7 @@
 ------------------------------------------------------------
           Begin self-consistency loop: Initialization.
 
-          Date     :  20230816, Time     :  133712.511
+          Date     :  20230816, Time     :  210045.530
 ------------------------------------------------------------
   | Estimated reciprocal-space cutoff momentum G_max:         1.96458638 bohr^-1 .
   | Reciprocal lattice points for long-range Hartree potential:      58
@@ -817,11 +817,11 @@
   | Maximal number of non-zero basis functions:      542 in task     3
   | Maximal number of non-zero basis functions:      511 in task     4
   | Maximal number of non-zero basis functions:      543 in task     5
-  Allocating        4.853 MB for KS_eigenvector_complex
+  Allocating       38.596 MB for KS_eigenvector_complex
   Integrating Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work        0.551 s, elapsed        0.557 s
+  Time summed over all CPUs for integration: real work        0.778 s, elapsed        0.789 s
   Integrating overlap matrix.
-  Time summed over all CPUs for integration: real work        0.364 s, elapsed        0.367 s
+  Time summed over all CPUs for integration: real work        0.505 s, elapsed        0.512 s
 
   Updating Kohn-Sham eigenvalues and eigenvectors using ELSI and the (modified) LAPACK eigensolver.
 
@@ -941,110 +941,110 @@
   Calculating total energy contributions from superposition of free atom densities.
 
   Total energy components:
-  | Sum of eigenvalues            :       -7687.41974030 Ha     -209185.33436623 eV
+  | Sum of eigenvalues            :       -7687.41976015 Ha     -209185.33490631 eV
   | XC energy correction          :        -332.14041886 Ha       -9038.00064566 eV
   | XC potential correction       :         433.35898859 Ha       11792.29806509 eV
   | Free-atom electrostatic energy:       -4972.20479783 Ha     -135300.57656645 eV
   | Hartree energy correction     :           0.00000000 Ha           0.00000000 eV
   | Entropy correction            :          -0.00000000 Ha          -0.00000000 eV
   | ---------------------------
-  | Total energy                  :      -12558.40596840 Ha     -341731.61351325 eV
-  | Total energy, T -> 0          :      -12558.40596840 Ha     -341731.61351325 eV  <-- do not rely on this value for anything but (periodic) metals
-  | Electronic free energy        :      -12558.40596840 Ha     -341731.61351325 eV
+  | Total energy                  :      -12558.40598825 Ha     -341731.61405333 eV
+  | Total energy, T -> 0          :      -12558.40598825 Ha     -341731.61405333 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy        :      -12558.40598825 Ha     -341731.61405333 eV
 
   Derived energy quantities:
-  | Kinetic energy                :       13122.29619755 Ha      357075.84735439 eV
+  | Kinetic energy                :       13122.29617770 Ha      357075.84681431 eV
   | Electrostatic energy          :      -25348.56174709 Ha     -689769.46022198 eV
   | Energy correction for multipole
   | error in Hartree potential    :           0.00000000 Ha           0.00000000 eV
-  | Sum of eigenvalues per atom                           :     -104592.66718312 eV
-  | Total energy (T->0) per atom                          :     -170865.80675663 eV  <-- do not rely on this value for anything but (periodic) metals
-  | Electronic free energy per atom                       :     -170865.80675663 eV
+  | Sum of eigenvalues per atom                           :     -104592.66745316 eV
+  | Total energy (T->0) per atom                          :     -170865.80702667 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy per atom                       :     -170865.80702667 eV
   Initialize hartree_potential_storage
   Max. number of atoms included in rho_multipole:            2
 
   End scf initialization - timings             :  max(cpu_time)    wall_clock(cpu1)
-  | Time for scf. initialization                :        0.318 s           0.318 s
-  | Boundary condition initialization           :        0.040 s           0.039 s
-  | Integration                                 :        0.158 s           0.158 s
-  | Solution of K.-S. eqns.                     :        0.095 s           0.095 s
-  | Grid partitioning                           :        0.024 s           0.024 s
-  | Preloading free-atom quantities on grid     :        0.033 s           0.033 s
-  | Free-atom superposition energy              :        0.007 s           0.006 s
-  | Total energy evaluation                     :        0.000 s           0.001 s
+  | Time for scf. initialization                :        1.376 s           1.377 s
+  | Boundary condition initialization           :        0.237 s           0.237 s
+  | Integration                                 :        0.221 s           0.221 s
+  | Solution of K.-S. eqns.                     :        1.060 s           1.059 s
+  | Grid partitioning                           :        0.030 s           0.031 s
+  | Preloading free-atom quantities on grid     :        0.052 s           0.051 s
+  | Free-atom superposition energy              :        0.008 s           0.009 s
+  | Total energy evaluation                     :        0.004 s           0.004 s
 
   Partial memory accounting:
   | Current value for overall tracked memory usage:
-  |   Minimum:        6.768 MB (on task 0)
-  |   Maximum:        6.881 MB (on task 1)
-  |   Average:        6.806 MB
+  |   Minimum:       40.511 MB (on task 0)
+  |   Maximum:       40.511 MB (on task 0)
+  |   Average:       40.511 MB
   | Peak value for overall tracked memory usage:
-  |   Minimum:        9.870 MB (on task 2 after allocating wave)
-  |   Maximum:       10.348 MB (on task 1 after allocating wave)
-  |   Average:       10.109 MB
+  |   Minimum:       43.501 MB (on task 2 after allocating wave)
+  |   Maximum:       43.979 MB (on task 1 after allocating wave)
+  |   Average:       43.815 MB
   | Largest tracked array allocation so far:
-  |   Minimum:        4.853 MB (KS_eigenvector_complex on task 0)
-  |   Maximum:        4.966 MB (KS_eigenvector_complex on task 1)
-  |   Average:        4.890 MB
+  |   Minimum:       38.596 MB (KS_eigenvector_complex on task 0)
+  |   Maximum:       38.596 MB (KS_eigenvector_complex on task 0)
+  |   Average:       38.596 MB
   Note:  These values currently only include a subset of arrays which are explicitly tracked.
   The "true" memory usage will be greater.
 ------------------------------------------------------------
   Time for density update prior                :  max(cpu_time)    wall_clock(cpu1)
-  | self-consistency iterative process          :        0.152 s           0.152 s
+  | self-consistency iterative process          :        0.314 s           0.314 s
 ------------------------------------------------------------
 Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |       CPU time |     Clock time
-  SCF    1 :  0.17E-02 |  0.79E-01 |  -0.44E+01 |  0.32E-01 |             . |        0.473 s |        0.473 s
-  SCF    2 :  0.36E-02 |  0.73E-01 |  -0.96E+01 |  0.17E+00 |             . |        0.478 s |        0.478 s
-  SCF    3 :  0.38E-02 |  0.38E-01 |  -0.65E+01 |  0.18E-01 |             . |        0.490 s |        0.491 s
-  SCF    4 :  0.25E-02 |  0.30E-01 |  -0.59E+01 |  0.42E-02 |             . |        0.484 s |        0.484 s
-  SCF    5 :  0.16E-02 |  0.13E-01 |   0.81E+01 |  0.14E-02 |             . |        0.494 s |        0.494 s
-  SCF    6 :  0.15E-02 |  0.40E-02 |   0.31E+01 |  0.19E-03 |             . |        0.487 s |        0.487 s
-  SCF    7 :  0.15E-02 |  0.18E-02 |   0.29E+01 |  0.29E-04 |             . |        0.486 s |        0.486 s
-  SCF    8 :  0.15E-02 |  0.28E-03 |  -0.26E+00 |  0.94E-06 |             . |        0.484 s |        0.485 s
-  SCF    9 :  0.15E-02 |  0.61E-04 |  -0.12E-01 |  0.25E-06 |             . |        0.501 s |        0.500 s
-  SCF   10 :  0.15E-02 |  0.52E-04 |  -0.74E-01 |  0.11E-05 |             . |        0.490 s |        0.489 s
-  SCF   11 :  0.15E-02 |  0.87E-06 |   0.25E-03 |  0.12E-07 |             . |        0.491 s |        0.492 s
-  SCF   12 :  0.15E-02 |  0.52E-06 |  -0.66E-03 |  0.32E-07 |             . |        0.484 s |        0.484 s
-  SCF   13 :  0.15E-02 |  0.98E-07 |  -0.42E-04 | -0.12E-08 |             . |        0.335 s |        0.335 s
+  SCF    1 :  0.17E-02 |  0.79E-01 |  -0.44E+01 |  0.32E-01 |             . |        1.439 s |        1.438 s
+  SCF    2 :  0.36E-02 |  0.73E-01 |  -0.96E+01 |  0.17E+00 |             . |        1.458 s |        1.458 s
+  SCF    3 :  0.37E-02 |  0.38E-01 |  -0.65E+01 |  0.18E-01 |             . |        1.463 s |        1.462 s
+  SCF    4 :  0.25E-02 |  0.30E-01 |  -0.59E+01 |  0.42E-02 |             . |        1.471 s |        1.471 s
+  SCF    5 :  0.16E-02 |  0.13E-01 |   0.81E+01 |  0.14E-02 |             . |        1.466 s |        1.466 s
+  SCF    6 :  0.15E-02 |  0.40E-02 |   0.31E+01 |  0.19E-03 |             . |        1.467 s |        1.467 s
+  SCF    7 :  0.15E-02 |  0.18E-02 |   0.29E+01 |  0.29E-04 |             . |        1.463 s |        1.463 s
+  SCF    8 :  0.15E-02 |  0.28E-03 |  -0.26E+00 |  0.88E-06 |             . |        1.463 s |        1.463 s
+  SCF    9 :  0.15E-02 |  0.59E-04 |  -0.10E-01 |  0.27E-06 |             . |        1.467 s |        1.467 s
+  SCF   10 :  0.15E-02 |  0.52E-04 |  -0.75E-01 |  0.10E-05 |             . |        1.469 s |        1.469 s
+  SCF   11 :  0.15E-02 |  0.87E-06 |   0.17E-03 |  0.89E-07 |             . |        1.468 s |        1.468 s
+  SCF   12 :  0.15E-02 |  0.52E-06 |  -0.64E-03 |  0.99E-08 |             . |        1.472 s |        1.472 s
+  SCF   13 :  0.15E-02 |  0.98E-07 |  -0.41E-04 | -0.51E-08 |             . |        1.154 s |        1.154 s
 
   Total energy components:
-  | Sum of eigenvalues            :       -7687.88394336 Ha     -209197.96597427 eV
-  | XC energy correction          :        -332.13263722 Ha       -9037.78889632 eV
-  | XC potential correction       :         433.34718719 Ha       11791.97693267 eV
+  | Sum of eigenvalues            :       -7687.88676523 Ha     -209198.04276115 eV
+  | XC energy correction          :        -332.13253811 Ha       -9037.78619955 eV
+  | XC potential correction       :         433.34706181 Ha       11791.97352086 eV
   | Free-atom electrostatic energy:       -4972.20479783 Ha     -135300.57656645 eV
-  | Hartree energy correction     :           0.47644018 Ha          12.96459703 eV
+  | Hartree energy correction     :           0.47925327 Ha          13.04114497 eV
   | Entropy correction            :           0.00000000 Ha           0.00000000 eV
   | ---------------------------
-  | Total energy                  :      -12558.39775103 Ha     -341731.38990733 eV
-  | Total energy, T -> 0          :      -12558.39775103 Ha     -341731.38990733 eV  <-- do not rely on this value for anything but (periodic) metals
-  | Electronic free energy        :      -12558.39775103 Ha     -341731.38990733 eV
+  | Total energy                  :      -12558.39778609 Ha     -341731.39086132 eV
+  | Total energy, T -> 0          :      -12558.39778609 Ha     -341731.39086132 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy        :      -12558.39778609 Ha     -341731.39086132 eV
 
   Derived energy quantities:
-  | Kinetic energy                :       13122.35146333 Ha      357077.35121272 eV
-  | Electrostatic energy          :      -25348.61657714 Ha     -689770.95222374 eV
+  | Kinetic energy                :       13122.35144186 Ha      357077.35062866 eV
+  | Electrostatic energy          :      -25348.61668984 Ha     -689770.95529044 eV
   | Energy correction for multipole
-  | error in Hartree potential    :           0.00389373 Ha           0.10595387 eV
-  | Sum of eigenvalues per atom                           :     -104598.98298714 eV
-  | Total energy (T->0) per atom                          :     -170865.69495367 eV  <-- do not rely on this value for anything but (periodic) metals
-  | Electronic free energy per atom                       :     -170865.69495367 eV
+  | error in Hartree potential    :           0.00387243 Ha           0.10537415 eV
+  | Sum of eigenvalues per atom                           :     -104599.02138058 eV
+  | Total energy (T->0) per atom                          :     -170865.69543066 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy per atom                       :     -170865.69543066 eV
   What follows are estimated values for band gap, HOMO, LUMO, etc.
   | They are estimated on a discrete k-point grid and not necessarily exact.
   | For converged numbers, create a DOS and/or band structure plot on a denser k-grid.
 
-  Highest occupied state (VBM) at     -4.91165769 eV (relative to internal zero)
+  Highest occupied state (VBM) at     -4.91245542 eV (relative to internal zero)
   | Occupation number:      2.00000000
   | K-point:       1 at    0.000000    0.000000    0.000000 (in units of recip. lattice)
 
-  Lowest unoccupied state (CBM) at    -4.13730048 eV (relative to internal zero)
+  Lowest unoccupied state (CBM) at    -4.13765951 eV (relative to internal zero)
   | Occupation number:      0.00000000
   | K-point:       1 at    0.000000    0.000000    0.000000 (in units of recip. lattice)
 
-  ESTIMATED overall HOMO-LUMO gap:      0.77435721 eV between HOMO at k-point 1 and LUMO at k-point 1
+  ESTIMATED overall HOMO-LUMO gap:      0.77479590 eV between HOMO at k-point 1 and LUMO at k-point 1
   | This appears to be a direct band gap.
   The gap value is above 0.2 eV. Unless you are using a very sparse k-point grid,
   this system is most likely an insulator or a semiconductor.
 
-  | Chemical Potential                          :    -4.42054954 eV
+  | Chemical Potential                          :    -4.42094699 eV
   | Note that, for insulating systems, the printed 'chemical potential' value is not uniquely defined.
   | It can be anywhere in the energy gap, as long as it correctly separates occupied and unoccupied states.
   | In systems with a gap, the physically relevant chemical potential is the VBM or HOMO.
@@ -1053,9 +1053,9 @@ Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |   
 
 
   Energy and forces in a compact form:
-  | Total energy uncorrected      :         -0.341731389907334E+06 eV
-  | Total energy corrected        :         -0.341731389907334E+06 eV  <-- do not rely on this value for anything but (periodic) metals
-  | Electronic free energy        :         -0.341731389907334E+06 eV
+  | Total energy uncorrected      :         -0.341731390861322E+06 eV
+  | Total energy corrected        :         -0.341731390861322E+06 eV  <-- do not rely on this value for anything but (periodic) metals
+  | Electronic free energy        :         -0.341731390861322E+06 eV
 
  -------------------------------------------------------------------------------
  |              ENTERING DFPT_DIELECTRIC (PERIODIC CALCULATION)                |
@@ -1076,11 +1076,11 @@ Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |   
 
 ==========================================================================
   Integrating momentum_matrix_sparse matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work        3.816 s, elapsed        3.879 s
+  Time summed over all CPUs for integration: real work        4.833 s, elapsed        4.890 s
   Integrating momentum_matrix_sparse matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work        3.810 s, elapsed        3.874 s
+  Time summed over all CPUs for integration: real work        4.825 s, elapsed        4.877 s
   Integrating momentum_matrix_sparse matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work        3.806 s, elapsed        3.868 s
+  Time summed over all CPUs for integration: real work        4.814 s, elapsed        4.865 s
 
 
 ===========================================================================
@@ -1092,207 +1092,207 @@ Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |   
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    1
 
-  Date     :  20230816, Time     :  133721.175
+  Date     :  20230816, Time     :  210109.048
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1677E+02
+  | Change of first_order_density_matrix     :  0.1673E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.835 s, elapsed        1.870 s
+  Time summed over all CPUs for integration: real work        2.174 s, elapsed        2.199 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.373981E-08
+  | Hartree multipole sum: apparent total charge =   0.339021E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.756 s, elapsed        0.769 s
-  | RMS delta_rho error from multipole expansion :   0.612626E-01
+  Time summed over all CPUs for potential: real work        1.054 s, elapsed        1.076 s
+  | RMS delta_rho error from multipole expansion :   0.586665E-01
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.523 s, elapsed       18.414 s
+  Time summed over all CPUs for integration: real work       20.443 s, elapsed       20.887 s
   End CPSCF iteration #     1                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.549 s           3.548 s
-  | first_order_DM                              :        0.020 s           0.019 s
-  | first_order_density                         :        0.312 s           0.312 s
-  | first_order_potential                       :        0.131 s           0.130 s
-  | first_order_H                               :        3.070 s           3.070 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.358 s           4.353 s
+  | first_order_DM                              :        0.177 s           0.172 s
+  | first_order_density                         :        0.367 s           0.367 s
+  | first_order_potential                       :        0.182 s           0.182 s
+  | first_order_H                               :        3.482 s           3.482 s
+  | Solution of Sternheimer eqns.               :        0.149 s           0.149 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    2
 
-  Date     :  20230816, Time     :  133724.723
+  Date     :  20230816, Time     :  210113.401
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1337E+02
+  | Change of first_order_density_matrix     :  0.1323E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.831 s, elapsed        1.869 s
+  Time summed over all CPUs for integration: real work        2.176 s, elapsed        2.209 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.540461E-08
+  | Hartree multipole sum: apparent total charge =  -0.366689E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.814 s, elapsed        0.830 s
-  | RMS delta_rho error from multipole expansion :   0.309988E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.166 s
+  | RMS delta_rho error from multipole expansion :   0.294913E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.528 s, elapsed       18.372 s
+  Time summed over all CPUs for integration: real work       20.438 s, elapsed       20.907 s
   End CPSCF iteration #     2                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.550 s           3.551 s
-  | first_order_DM                              :        0.017 s           0.017 s
-  | first_order_density                         :        0.312 s           0.311 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        3.063 s           3.063 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.017 s
+  | Time for this iteration                     :        4.375 s           4.375 s
+  | first_order_DM                              :        0.172 s           0.172 s
+  | first_order_density                         :        0.368 s           0.368 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.486 s           3.486 s
+  | Solution of Sternheimer eqns.               :        0.149 s           0.149 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    3
 
-  Date     :  20230816, Time     :  133728.274
+  Date     :  20230816, Time     :  210117.776
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1876E+01
+  | Change of first_order_density_matrix     :  0.1995E+01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.822 s, elapsed        1.853 s
+  Time summed over all CPUs for integration: real work        2.139 s, elapsed        2.173 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.502465E-08
+  | Hartree multipole sum: apparent total charge =  -0.332181E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.830 s
-  | RMS delta_rho error from multipole expansion :   0.301419E+00
+  Time summed over all CPUs for potential: real work        1.130 s, elapsed        1.158 s
+  | RMS delta_rho error from multipole expansion :   0.287702E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.509 s, elapsed       18.366 s
+  Time summed over all CPUs for integration: real work       19.695 s, elapsed       20.309 s
   End CPSCF iteration #     3                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.548 s           3.548 s
-  | first_order_DM                              :        0.017 s           0.017 s
-  | first_order_density                         :        0.309 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.140 s
-  | first_order_H                               :        3.062 s           3.062 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.017 s
+  | Time for this iteration                     :        4.266 s           4.266 s
+  | first_order_DM                              :        0.171 s           0.171 s
+  | first_order_density                         :        0.363 s           0.363 s
+  | first_order_potential                       :        0.196 s           0.196 s
+  | first_order_H                               :        3.386 s           3.386 s
+  | Solution of Sternheimer eqns.               :        0.148 s           0.147 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    4
 
-  Date     :  20230816, Time     :  133731.822
+  Date     :  20230816, Time     :  210122.042
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1737E+00
+  | Change of first_order_density_matrix     :  0.1568E+00
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.830 s, elapsed        1.867 s
+  Time summed over all CPUs for integration: real work        2.168 s, elapsed        2.197 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.521242E-08
+  | Hartree multipole sum: apparent total charge =  -0.350830E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.829 s, elapsed        0.857 s
-  | RMS delta_rho error from multipole expansion :   0.301827E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.168 s
+  | RMS delta_rho error from multipole expansion :   0.287910E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.509 s, elapsed       18.371 s
+  Time summed over all CPUs for integration: real work       20.376 s, elapsed       20.962 s
   End CPSCF iteration #     4                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.556 s           3.556 s
-  | first_order_DM                              :        0.017 s           0.016 s
-  | first_order_density                         :        0.311 s           0.311 s
-  | first_order_potential                       :        0.145 s           0.145 s
-  | first_order_H                               :        3.063 s           3.063 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.017 s
+  | Time for this iteration                     :        4.386 s           4.386 s
+  | first_order_DM                              :        0.168 s           0.169 s
+  | first_order_density                         :        0.366 s           0.366 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.495 s           3.495 s
+  | Solution of Sternheimer eqns.               :        0.155 s           0.155 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    5
 
-  Date     :  20230816, Time     :  133735.378
+  Date     :  20230816, Time     :  210126.428
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.2196E-01
+  | Change of first_order_density_matrix     :  0.2195E-01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.825 s, elapsed        1.857 s
+  Time summed over all CPUs for integration: real work        2.193 s, elapsed        2.218 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.518415E-08
+  | Hartree multipole sum: apparent total charge =  -0.347062E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.832 s
-  | RMS delta_rho error from multipole expansion :   0.302057E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.166 s
+  | RMS delta_rho error from multipole expansion :   0.288091E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.510 s, elapsed       18.344 s
+  Time summed over all CPUs for integration: real work       20.320 s, elapsed       21.028 s
   End CPSCF iteration #     5                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.546 s           3.545 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.310 s           0.310 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        3.058 s           3.059 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.015 s
+  | Time for this iteration                     :        4.402 s           4.402 s
+  | first_order_DM                              :        0.172 s           0.172 s
+  | first_order_density                         :        0.370 s           0.370 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.506 s           3.505 s
+  | Solution of Sternheimer eqns.               :        0.151 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    6
 
-  Date     :  20230816, Time     :  133738.924
+  Date     :  20230816, Time     :  210130.830
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.8595E-02
+  | Change of first_order_density_matrix     :  0.7612E-02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.828 s, elapsed        1.868 s
+  Time summed over all CPUs for integration: real work        2.268 s, elapsed        2.386 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.518938E-08
+  | Hartree multipole sum: apparent total charge =  -0.347881E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.824 s, elapsed        0.849 s
-  | RMS delta_rho error from multipole expansion :   0.302181E+00
+  Time summed over all CPUs for potential: real work        1.183 s, elapsed        1.259 s
+  | RMS delta_rho error from multipole expansion :   0.288202E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.528 s, elapsed       18.343 s
+  Time summed over all CPUs for integration: real work       20.129 s, elapsed       21.311 s
   End CPSCF iteration #     6                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.551 s           3.551 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.312 s           0.311 s
-  | first_order_potential                       :        0.144 s           0.144 s
-  | first_order_H                               :        3.058 s           3.058 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.507 s           4.508 s
+  | first_order_DM                              :        0.171 s           0.171 s
+  | first_order_density                         :        0.398 s           0.398 s
+  | first_order_potential                       :        0.214 s           0.214 s
+  | first_order_H                               :        3.553 s           3.553 s
+  | Solution of Sternheimer eqns.               :        0.165 s           0.164 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    7
 
-  Date     :  20230816, Time     :  133742.475
+  Date     :  20230816, Time     :  210135.338
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.3498E-03
+  | Change of first_order_density_matrix     :  0.3499E-03
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.827 s, elapsed        1.859 s
+  Time summed over all CPUs for integration: real work        2.298 s, elapsed        2.497 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =  -0.519073E-08
+  | Hartree multipole sum: apparent total charge =  -0.347927E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.832 s
-  | RMS delta_rho error from multipole expansion :   0.302183E+00
+  Time summed over all CPUs for potential: real work        1.194 s, elapsed        1.290 s
+  | RMS delta_rho error from multipole expansion :   0.288204E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.492 s, elapsed       18.321 s
+  Time summed over all CPUs for integration: real work       20.438 s, elapsed       21.677 s
 
   CP-self-consistency cycle converged.
 
   End CPSCF iteration #     7                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.545 s           3.545 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.310 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.142 s
-  | first_order_H                               :        3.055 s           3.054 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.597 s           4.596 s
+  | first_order_DM                              :        0.182 s           0.182 s
+  | first_order_density                         :        0.417 s           0.416 s
+  | first_order_potential                       :        0.218 s           0.218 s
+  | first_order_H                               :        3.614 s           3.614 s
+  | Solution of Sternheimer eqns.               :        0.158 s           0.158 s
 ------------------------------------------------------------
 
 
@@ -1305,207 +1305,207 @@ Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |   
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    1
 
-  Date     :  20230816, Time     :  133746.032
+  Date     :  20230816, Time     :  210140.048
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1677E+02
+  | Change of first_order_density_matrix     :  0.1673E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.833 s, elapsed        1.875 s
+  Time summed over all CPUs for integration: real work        2.219 s, elapsed        2.305 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.554844E-08
+  | Hartree multipole sum: apparent total charge =   0.621611E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.762 s, elapsed        0.778 s
-  | RMS delta_rho error from multipole expansion :   0.612627E-01
+  Time summed over all CPUs for potential: real work        1.085 s, elapsed        1.142 s
+  | RMS delta_rho error from multipole expansion :   0.586665E-01
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       18.105 s, elapsed       19.141 s
+  Time summed over all CPUs for integration: real work       20.792 s, elapsed       21.334 s
   End CPSCF iteration #     1                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.671 s           3.669 s
-  | first_order_DM                              :        0.017 s           0.016 s
-  | first_order_density                         :        0.313 s           0.313 s
-  | first_order_potential                       :        0.132 s           0.132 s
-  | first_order_H                               :        3.191 s           3.191 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.477 s           4.469 s
+  | first_order_DM                              :        0.185 s           0.177 s
+  | first_order_density                         :        0.384 s           0.384 s
+  | first_order_potential                       :        0.193 s           0.193 s
+  | first_order_H                               :        3.557 s           3.557 s
+  | Solution of Sternheimer eqns.               :        0.157 s           0.157 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    2
 
-  Date     :  20230816, Time     :  133749.701
+  Date     :  20230816, Time     :  210144.518
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1337E+02
+  | Change of first_order_density_matrix     :  0.1323E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.818 s, elapsed        1.846 s
+  Time summed over all CPUs for integration: real work        2.361 s, elapsed        2.553 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.529830E-08
+  | Hartree multipole sum: apparent total charge =   0.451485E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.818 s, elapsed        0.837 s
-  | RMS delta_rho error from multipole expansion :   0.309989E+00
+  Time summed over all CPUs for potential: real work        1.156 s, elapsed        1.206 s
+  | RMS delta_rho error from multipole expansion :   0.294913E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.404 s, elapsed       17.708 s
+  Time summed over all CPUs for integration: real work       20.719 s, elapsed       21.220 s
   End CPSCF iteration #     2                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.436 s           3.435 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.308 s           0.308 s
-  | first_order_potential                       :        0.142 s           0.142 s
-  | first_order_H                               :        2.952 s           2.952 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.498 s           4.497 s
+  | first_order_DM                              :        0.178 s           0.178 s
+  | first_order_density                         :        0.426 s           0.426 s
+  | first_order_potential                       :        0.204 s           0.204 s
+  | first_order_H                               :        3.538 s           3.538 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    3
 
-  Date     :  20230816, Time     :  133753.137
+  Date     :  20230816, Time     :  210149.015
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1876E+01
+  | Change of first_order_density_matrix     :  0.1995E+01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.822 s, elapsed        1.856 s
+  Time summed over all CPUs for integration: real work        2.182 s, elapsed        2.210 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.454590E-08
+  | Hartree multipole sum: apparent total charge =   0.456449E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.816 s, elapsed        0.833 s
-  | RMS delta_rho error from multipole expansion :   0.301419E+00
+  Time summed over all CPUs for potential: real work        1.133 s, elapsed        1.162 s
+  | RMS delta_rho error from multipole expansion :   0.287702E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.414 s, elapsed       17.710 s
+  Time summed over all CPUs for integration: real work       20.082 s, elapsed       20.585 s
   End CPSCF iteration #     3                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.438 s           3.438 s
-  | first_order_DM                              :        0.016 s           0.017 s
-  | first_order_density                         :        0.309 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.142 s
-  | first_order_H                               :        2.953 s           2.952 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.320 s           4.321 s
+  | first_order_DM                              :        0.171 s           0.171 s
+  | first_order_density                         :        0.369 s           0.369 s
+  | first_order_potential                       :        0.197 s           0.196 s
+  | first_order_H                               :        3.432 s           3.432 s
+  | Solution of Sternheimer eqns.               :        0.149 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    4
 
-  Date     :  20230816, Time     :  133756.575
+  Date     :  20230816, Time     :  210153.336
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1737E+00
+  | Change of first_order_density_matrix     :  0.1568E+00
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.817 s, elapsed        1.846 s
+  Time summed over all CPUs for integration: real work        2.171 s, elapsed        2.199 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.522386E-08
+  | Hartree multipole sum: apparent total charge =   0.449535E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.814 s, elapsed        0.829 s
-  | RMS delta_rho error from multipole expansion :   0.301827E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.165 s
+  | RMS delta_rho error from multipole expansion :   0.287910E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.420 s, elapsed       17.762 s
+  Time summed over all CPUs for integration: real work       20.844 s, elapsed       21.357 s
   End CPSCF iteration #     4                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.445 s           3.445 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.308 s           0.308 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        2.962 s           2.961 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.454 s           4.454 s
+  | first_order_DM                              :        0.175 s           0.175 s
+  | first_order_density                         :        0.367 s           0.367 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.561 s           3.560 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.151 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    5
 
-  Date     :  20230816, Time     :  133800.020
+  Date     :  20230816, Time     :  210157.790
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.2196E-01
+  | Change of first_order_density_matrix     :  0.2195E-01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.825 s, elapsed        1.859 s
+  Time summed over all CPUs for integration: real work        2.171 s, elapsed        2.209 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.453938E-08
+  | Hartree multipole sum: apparent total charge =   0.453264E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.831 s
-  | RMS delta_rho error from multipole expansion :   0.302057E+00
+  Time summed over all CPUs for potential: real work        1.142 s, elapsed        1.177 s
+  | RMS delta_rho error from multipole expansion :   0.288091E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.408 s, elapsed       17.730 s
+  Time summed over all CPUs for integration: real work       20.806 s, elapsed       21.172 s
   End CPSCF iteration #     5                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.443 s           3.443 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.310 s           0.310 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        2.956 s           2.956 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.425 s           4.425 s
+  | first_order_DM                              :        0.173 s           0.173 s
+  | first_order_density                         :        0.368 s           0.368 s
+  | first_order_potential                       :        0.199 s           0.199 s
+  | first_order_H                               :        3.530 s           3.530 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    6
 
-  Date     :  20230816, Time     :  133803.463
+  Date     :  20230816, Time     :  210202.215
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.8595E-02
+  | Change of first_order_density_matrix     :  0.7612E-02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.847 s, elapsed        1.886 s
+  Time summed over all CPUs for integration: real work        2.165 s, elapsed        2.189 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.525134E-08
+  | Hartree multipole sum: apparent total charge =   0.452328E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.819 s, elapsed        0.839 s
-  | RMS delta_rho error from multipole expansion :   0.302182E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.163 s
+  | RMS delta_rho error from multipole expansion :   0.288202E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.385 s, elapsed       17.692 s
+  Time summed over all CPUs for integration: real work       20.764 s, elapsed       20.991 s
   End CPSCF iteration #     6                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.444 s           3.444 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.315 s           0.314 s
-  | first_order_potential                       :        0.142 s           0.143 s
-  | first_order_H                               :        2.950 s           2.949 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.391 s           4.391 s
+  | first_order_DM                              :        0.173 s           0.172 s
+  | first_order_density                         :        0.365 s           0.365 s
+  | first_order_potential                       :        0.197 s           0.196 s
+  | first_order_H                               :        3.500 s           3.500 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    7
 
-  Date     :  20230816, Time     :  133806.907
+  Date     :  20230816, Time     :  210206.606
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.3495E-03
+  | Change of first_order_density_matrix     :  0.3489E-03
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.816 s, elapsed        1.844 s
+  Time summed over all CPUs for integration: real work        2.183 s, elapsed        2.229 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.453399E-08
+  | Hartree multipole sum: apparent total charge =   0.452532E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.828 s, elapsed        0.858 s
-  | RMS delta_rho error from multipole expansion :   0.302183E+00
+  Time summed over all CPUs for potential: real work        1.181 s, elapsed        1.261 s
+  | RMS delta_rho error from multipole expansion :   0.288204E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.387 s, elapsed       17.681 s
+  Time summed over all CPUs for integration: real work       20.776 s, elapsed       21.081 s
 
   CP-self-consistency cycle converged.
 
   End CPSCF iteration #     7                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.441 s           3.440 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.308 s           0.308 s
-  | first_order_potential                       :        0.146 s           0.145 s
-  | first_order_H                               :        2.948 s           2.948 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.434 s           4.434 s
+  | first_order_DM                              :        0.176 s           0.176 s
+  | first_order_density                         :        0.372 s           0.371 s
+  | first_order_potential                       :        0.213 s           0.214 s
+  | first_order_H                               :        3.514 s           3.514 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 
@@ -1518,222 +1518,222 @@ Convergence:    q app. |  density  | eigen (eV) | Etot (eV) |             . |   
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    1
 
-  Date     :  20230816, Time     :  133810.358
+  Date     :  20230816, Time     :  210211.150
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1677E+02
+  | Change of first_order_density_matrix     :  0.1673E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.823 s, elapsed        1.851 s
+  Time summed over all CPUs for integration: real work        2.177 s, elapsed        2.203 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.359848E-08
+  | Hartree multipole sum: apparent total charge =   0.770190E-08
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.754 s, elapsed        0.765 s
-  | RMS delta_rho error from multipole expansion :   0.612627E-01
+  Time summed over all CPUs for potential: real work        1.061 s, elapsed        1.089 s
+  | RMS delta_rho error from multipole expansion :   0.586665E-01
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.382 s, elapsed       17.705 s
+  Time summed over all CPUs for integration: real work       20.727 s, elapsed       21.222 s
   End CPSCF iteration #     1                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.424 s           3.424 s
-  | first_order_DM                              :        0.017 s           0.017 s
-  | first_order_density                         :        0.309 s           0.309 s
-  | first_order_potential                       :        0.130 s           0.129 s
-  | first_order_H                               :        2.952 s           2.952 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.414 s           4.412 s
+  | first_order_DM                              :        0.174 s           0.172 s
+  | first_order_density                         :        0.367 s           0.367 s
+  | first_order_potential                       :        0.184 s           0.184 s
+  | first_order_H                               :        3.538 s           3.538 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    2
 
-  Date     :  20230816, Time     :  133813.782
+  Date     :  20230816, Time     :  210215.562
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1337E+02
+  | Change of first_order_density_matrix     :  0.1323E+02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.816 s, elapsed        1.844 s
+  Time summed over all CPUs for integration: real work        2.185 s, elapsed        2.227 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.894317E-07
+  | Hartree multipole sum: apparent total charge =   0.757348E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.824 s, elapsed        0.847 s
-  | RMS delta_rho error from multipole expansion :   0.309988E+00
+  Time summed over all CPUs for potential: real work        1.140 s, elapsed        1.172 s
+  | RMS delta_rho error from multipole expansion :   0.294912E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.390 s, elapsed       17.704 s
+  Time summed over all CPUs for integration: real work       20.723 s, elapsed       20.925 s
   End CPSCF iteration #     2                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.436 s           3.436 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.307 s           0.307 s
-  | first_order_potential                       :        0.144 s           0.144 s
-  | first_order_H                               :        2.952 s           2.951 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.383 s           4.383 s
+  | first_order_DM                              :        0.173 s           0.173 s
+  | first_order_density                         :        0.371 s           0.372 s
+  | first_order_potential                       :        0.198 s           0.198 s
+  | first_order_H                               :        3.489 s           3.489 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.149 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    3
 
-  Date     :  20230816, Time     :  133817.218
+  Date     :  20230816, Time     :  210219.946
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.2028E+01
+  | Change of first_order_density_matrix     :  0.2075E+01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.822 s, elapsed        1.855 s
+  Time summed over all CPUs for integration: real work        2.169 s, elapsed        2.195 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.885641E-07
+  | Hartree multipole sum: apparent total charge =   0.757429E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.814 s, elapsed        0.829 s
-  | RMS delta_rho error from multipole expansion :   0.301419E+00
+  Time summed over all CPUs for potential: real work        1.135 s, elapsed        1.164 s
+  | RMS delta_rho error from multipole expansion :   0.287702E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.396 s, elapsed       17.684 s
+  Time summed over all CPUs for integration: real work       20.775 s, elapsed       21.115 s
   End CPSCF iteration #     3                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.433 s           3.433 s
-  | first_order_DM                              :        0.017 s           0.017 s
-  | first_order_density                         :        0.309 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        2.949 s           2.948 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.411 s           4.410 s
+  | first_order_DM                              :        0.172 s           0.172 s
+  | first_order_density                         :        0.366 s           0.366 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.520 s           3.520 s
+  | Solution of Sternheimer eqns.               :        0.152 s           0.152 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    4
 
-  Date     :  20230816, Time     :  133820.651
+  Date     :  20230816, Time     :  210224.356
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.1737E+00
+  | Change of first_order_density_matrix     :  0.1568E+00
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.819 s, elapsed        1.849 s
+  Time summed over all CPUs for integration: real work        2.188 s, elapsed        2.234 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.879817E-07
+  | Hartree multipole sum: apparent total charge =   0.748989E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.814 s, elapsed        0.830 s
-  | RMS delta_rho error from multipole expansion :   0.301828E+00
+  Time summed over all CPUs for potential: real work        1.141 s, elapsed        1.175 s
+  | RMS delta_rho error from multipole expansion :   0.287910E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.392 s, elapsed       17.719 s
+  Time summed over all CPUs for integration: real work       20.793 s, elapsed       21.123 s
   End CPSCF iteration #     4                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.438 s           3.438 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.308 s           0.308 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        2.954 s           2.954 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.420 s           4.421 s
+  | first_order_DM                              :        0.174 s           0.175 s
+  | first_order_density                         :        0.373 s           0.372 s
+  | first_order_potential                       :        0.199 s           0.199 s
+  | first_order_H                               :        3.522 s           3.521 s
+  | Solution of Sternheimer eqns.               :        0.149 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    5
 
-  Date     :  20230816, Time     :  133824.089
+  Date     :  20230816, Time     :  210228.777
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.2314E-01
+  | Change of first_order_density_matrix     :  0.2230E-01
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.823 s, elapsed        1.855 s
+  Time summed over all CPUs for integration: real work        2.168 s, elapsed        2.194 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.886984E-07
+  | Hartree multipole sum: apparent total charge =   0.756076E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.831 s
-  | RMS delta_rho error from multipole expansion :   0.302057E+00
+  Time summed over all CPUs for potential: real work        1.147 s, elapsed        1.189 s
+  | RMS delta_rho error from multipole expansion :   0.288091E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.373 s, elapsed       17.675 s
+  Time summed over all CPUs for integration: real work       20.722 s, elapsed       21.032 s
   End CPSCF iteration #     5                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.433 s           3.433 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.309 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.141 s
-  | first_order_H                               :        2.947 s           2.947 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.400 s           4.400 s
+  | first_order_DM                              :        0.173 s           0.172 s
+  | first_order_density                         :        0.366 s           0.366 s
+  | first_order_potential                       :        0.201 s           0.201 s
+  | first_order_H                               :        3.506 s           3.506 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    6
 
-  Date     :  20230816, Time     :  133827.522
+  Date     :  20230816, Time     :  210233.177
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.8595E-02
+  | Change of first_order_density_matrix     :  0.7612E-02
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.819 s, elapsed        1.848 s
+  Time summed over all CPUs for integration: real work        2.164 s, elapsed        2.193 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.885699E-07
+  | Hartree multipole sum: apparent total charge =   0.754622E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.815 s, elapsed        0.830 s
-  | RMS delta_rho error from multipole expansion :   0.302182E+00
+  Time summed over all CPUs for potential: real work        1.134 s, elapsed        1.163 s
+  | RMS delta_rho error from multipole expansion :   0.288202E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.403 s, elapsed       17.736 s
+  Time summed over all CPUs for integration: real work       20.706 s, elapsed       20.969 s
   End CPSCF iteration #     6                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.444 s           3.443 s
-  | first_order_DM                              :        0.016 s           0.016 s
-  | first_order_density                         :        0.308 s           0.309 s
-  | first_order_potential                       :        0.141 s           0.140 s
-  | first_order_H                               :        2.957 s           2.958 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.015 s
+  | Time for this iteration                     :        4.386 s           4.386 s
+  | first_order_DM                              :        0.172 s           0.172 s
+  | first_order_density                         :        0.366 s           0.366 s
+  | first_order_potential                       :        0.196 s           0.196 s
+  | first_order_H                               :        3.496 s           3.496 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.149 s
 ------------------------------------------------------------
 
 --------------------- CPSCF ---------------------------------------
           Begin CP-self-consistency iteration #    7
 
-  Date     :  20230816, Time     :  133830.965
+  Date     :  20230816, Time     :  210237.563
 ------------------------------------------------------------
 
   CPSCF convergence accuracy:
-  | Change of first_order_density_matrix     :  0.3506E-03
+  | Change of first_order_density_matrix     :  0.3499E-03
   Integrating first_order_rho: batch-based integration.
-  Time summed over all CPUs for integration: real work        1.818 s, elapsed        1.848 s
+  Time summed over all CPUs for integration: real work        2.168 s, elapsed        2.193 s
 
   Evaluating partitioned Hartree potential by multipole expansion.
   | Analytical far-field extrapolation by fixed multipoles:
-  | Hartree multipole sum: apparent total charge =   0.885967E-07
+  | Hartree multipole sum: apparent total charge =   0.754911E-07
   Summing up the Hartree potential.
-  Time summed over all CPUs for potential: real work        0.826 s, elapsed        0.853 s
-  | RMS delta_rho error from multipole expansion :   0.302183E+00
+  Time summed over all CPUs for potential: real work        1.136 s, elapsed        1.166 s
+  | RMS delta_rho error from multipole expansion :   0.288204E+00
 
   Integrating first-order-Hamiltonian matrix: batch-based integration.
-  Time summed over all CPUs for integration: real work       17.399 s, elapsed       17.698 s
+  Time summed over all CPUs for integration: real work       20.963 s, elapsed       21.431 s
 
   CP-self-consistency cycle converged.
 
   End CPSCF iteration #     7                  :  max(cpu_time)    wall_clock(cpu1)
-  | Time for this iteration                     :        3.442 s           3.443 s
-  | first_order_DM                              :        0.016 s           0.017 s
-  | first_order_density                         :        0.308 s           0.308 s
-  | first_order_potential                       :        0.145 s           0.144 s
-  | first_order_H                               :        2.951 s           2.951 s
-  | Solution of Sternheimer eqns.               :        0.016 s           0.016 s
+  | Time for this iteration                     :        4.466 s           4.466 s
+  | first_order_DM                              :        0.172 s           0.173 s
+  | first_order_density                         :        0.366 s           0.365 s
+  | first_order_potential                       :        0.197 s           0.197 s
+  | first_order_H                               :        3.573 s           3.573 s
+  | Solution of Sternheimer eqns.               :        0.150 s           0.150 s
 ------------------------------------------------------------
 dP_dE (Bohr^3) at every cycle:--->
- (333.449056746707,0.244524773589461) (1.067801226184883E-002,2.87588059961031) (1.420332888280029E-005,4.61367897203761)
- (1.067801638419041E-002,-2.04990238746560) (333.449881671678,0.267699749146471) (7.826515716837790E-004,3.81703768167478)
- (1.420841815047424E-005,-4.27068070699106) (7.826574663960528E-004,-3.60692466126356) (333.450124402898,0.249708676112812)
+ (273.380829179098,6.297127792424131E-002) (1.849927301620369E-004,2.96780844601159) (1.557861808887395E-006,3.92914242335506)
+ (1.849922848009555E-004,-1.97282284397199) (273.380713581653,5.782211606684481E-002) (-2.295572137289703E-005,1.69791622869977)
+ (1.556233705013454E-006,-3.15015274900252) (-2.295457025636161E-005,-1.56683159952133) (273.380681020533,5.485572738896229E-002)
 DFPT polarizability (Bohr^3)        xx        yy        zz        xy        xz        yz
-  | Polarizability:--->            333.449   333.450   333.450     0.011     0.000     0.001
+  | Polarizability:--->            273.381   273.381   273.381     0.000     0.000    -0.000
 
 DFPT for dielectric_constant:--->
-   10.1086630198127       2.916859815515732E-004  3.879853127048284E-007
-  2.916860941595400E-004   10.1086855538803       2.137930602637627E-005
-  3.881243337136504E-007  2.137946704931700E-005   10.1086921844490
+   8.46780894618315       5.053354946033395E-006  4.255534079789036E-008
+  5.053342780324930E-006   8.46780578846490      -6.270700910132266E-007
+  4.251086668933037E-008 -6.270386465319615E-007   8.46780489900888
 
                                                :  max(cpu_time)    wall_clock(cpu1)
-  | Time for  dielectric calculation            :        0.002 s           0.002 s
+  | Time for  dielectric calculation            :        0.022 s           0.022 s
 ===========================================================================
 
 ------------------------------------------------------------------------------
@@ -1742,12 +1742,12 @@ DFPT for dielectric_constant:--->
   The following output summarizes some interesting total energy values
   at the end of a run (AFTER all relaxation, molecular dynamics, etc.).
 
-  | Total energy of the DFT / Hartree-Fock s.c.f. calculation      :        -341731.389907334 eV
-  | Final zero-broadening corrected energy (caution - metals only) :        -341731.389907334 eV
+  | Total energy of the DFT / Hartree-Fock s.c.f. calculation      :        -341731.390861322 eV
+  | Final zero-broadening corrected energy (caution - metals only) :        -341731.390861322 eV
   | For reference only, the value of 1 Hartree used in FHI-aims is :             27.211384500 eV
   | For reference only, the overall average (free atom contribution
   | + realspace contribution) of the electrostatic potential after
-  | s.c.f. convergence is                                          :            -13.765340265 eV
+  | s.c.f. convergence is                                          :            -13.765662525 eV
 
   Before relying on these values, please be sure to understand exactly which
   total energy value is referred to by a given number. Different objects may
@@ -1827,7 +1827,7 @@ DFPT for dielectric_constant:--->
 
 ------------------------------------------------------------
           Leaving FHI-aims.
-          Date     :  20230816, Time     :  133834.415
+          Date     :  20230816, Time     :  210242.084
 
           Computational steps:
           | Number of self-consistency cycles          :           34
@@ -1836,38 +1836,38 @@ DFPT for dielectric_constant:--->
           | Number of CPSCF (re)initializations          :            0
 
           Detailed time accounting                     :  max(cpu_time)    wall_clock(cpu1)
-          | Total time                                  :       82.402 s          82.413 s
-          | Preparation time                            :        0.297 s           0.297 s
-          | Boundary condition initalization            :        0.040 s           0.039 s
-          | Grid partitioning                           :        0.024 s           0.024 s
-          | Preloading free-atom quantities on grid     :        0.033 s           0.033 s
-          | Free-atom superposition energy              :        0.007 s           0.006 s
-          | Total time for integrations                 :        1.395 s           1.394 s
-          | Total time for solution of K.-S. equations  :        1.015 s           1.017 s
-          | Total time for density update               :        1.991 s           1.992 s
-          | Total time for mixing & preconditioning     :        0.616 s           0.617 s
-          | Total time for Hartree multipole update     :        0.009 s           0.009 s
-          | Total time for Hartree multipole sum        :        1.548 s           1.548 s
-          | Total time for total energy evaluation      :        0.006 s           0.005 s
+          | Total time                                  :      117.359 s         117.361 s
+          | Preparation time                            :        0.498 s           0.498 s
+          | Boundary condition initalization            :        0.237 s           0.237 s
+          | Grid partitioning                           :        0.030 s           0.031 s
+          | Preloading free-atom quantities on grid     :        0.052 s           0.051 s
+          | Free-atom superposition energy              :        0.008 s           0.009 s
+          | Total time for integrations                 :        1.971 s           1.972 s
+          | Total time for solution of K.-S. equations  :       11.414 s          11.414 s
+          | Total time for density update               :        4.073 s           4.071 s
+          | Total time for mixing & preconditioning     :        0.675 s           0.673 s
+          | Total time for Hartree multipole update     :        0.010 s           0.012 s
+          | Total time for Hartree multipole sum        :        2.110 s           2.108 s
+          | Total time for total energy evaluation      :        0.049 s           0.050 s
           | Total time for scaled ZORA corrections      :        0.000 s           0.000 s
-          | Total time first_order_DM                   :        0.350 s           0.345 s
-          | Total time first_order_density              :        6.504 s           6.502 s
-          | Total time first_order_potential            :        2.950 s           2.949 s
-          | Total time first_order_H                    :       63.002 s          62.999 s
-          | Total time solving of Sternheimer equations :        0.332 s           0.337 s
-          | Total time for dielectric constant          :        0.002 s           0.002 s
+          | Total time first_order_DM                   :        3.654 s           3.640 s
+          | Total time first_order_density              :        7.874 s           7.872 s
+          | Total time first_order_potential            :        4.173 s           4.172 s
+          | Total time first_order_H                    :       73.797 s          73.795 s
+          | Total time solving of Sternheimer equations :        3.181 s           3.180 s
+          | Total time for dielectric constant          :        0.022 s           0.022 s
           | Total time momentum matrix                  :        0.000 s           0.000 s
 
           Partial memory accounting:
           | Residual value for overall tracked memory usage across tasks:     0.000000 MB (should be 0.000000 MB)
           | Peak values for overall tracked memory usage:
-          |   Minimum:       20.552 MB (on task 0 after allocating DFPT_pulay_mixing::pulay_mix::alphas)
-          |   Maximum:       20.665 MB (on task 1 after allocating DFPT_pulay_mixing::pulay_mix::alphas)
-          |   Average:       20.589 MB
+          |   Minimum:       54.295 MB (on task 0 after allocating DFPT_pulay_mixing::pulay_mix::alphas)
+          |   Maximum:       54.295 MB (on task 0 after allocating DFPT_pulay_mixing::pulay_mix::alphas)
+          |   Average:       54.295 MB
           | Largest tracked array allocation:
-          |   Minimum:        5.360 MB (DFPT_pulay_mixing::initialize_pulay_mixing::X_in_diffs on task 0)
-          |   Maximum:        5.360 MB (DFPT_pulay_mixing::initialize_pulay_mixing::X_in_diffs on task 0)
-          |   Average:        5.360 MB
+          |   Minimum:       38.596 MB (KS_eigenvector_complex on task 0)
+          |   Maximum:       38.596 MB (KS_eigenvector_complex on task 0)
+          |   Average:       38.596 MB
           Note:  These values currently only include a subset of arrays which are explicitly tracked.
           The "true" memory usage will be greater.
 

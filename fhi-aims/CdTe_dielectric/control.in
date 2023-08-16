@@ -1,6 +1,6 @@
 # for production level calculation use tight basis set
 xc                                 pbe
-k_grid                             8 8 8
+k_grid                             16 16 16
 sc_accuracy_rho                    1e-07
 relativistic                       atomic_zora scalar
 output_level                       MD_light

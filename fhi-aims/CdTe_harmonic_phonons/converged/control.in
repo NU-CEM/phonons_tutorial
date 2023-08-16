@@ -1,4 +1,4 @@
-# production level calculation
+# for production level calculation converge calc parameters and use tight defaults
 xc                                 pbesol
 k_grid                             1 1 1
 sc_accuracy_rho                    1e-03

@@ -1,12 +1,12 @@
-# for production level calculation converge calc parameters and use tight defaults
+# production level calculation
 xc                                 pbesol
-k_grid                             1 1 1
-sc_accuracy_rho                    1e-03
+k_grid                             6 6 6
+sc_accuracy_rho                    1E-5
 relativistic                       atomic_zora scalar
 output_level                       MD_light
 compute_forces                     .true.
 compute_analytical_stress          .true.
-sc_accuracy_forces                 1E-1
+sc_accuracy_forces                 1E-3
 ################################################################################
 #
 #  FHI-aims code project

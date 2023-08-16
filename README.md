@@ -51,7 +51,7 @@ For those who may not be able to run the electronic structure calculations we pr
 
 ### Other configuration files and scripts 
 
-`band.conf`: Phonopy configuration file for producing phonon dispersion (Step 6)
-`mesh.conf`: Phonopy configuration file for producing phonon density of states and thermal properties (Step 6)
-`preprocessing_phonopy_aims.py`: setting up multiple folders for force calculations
+`band.conf`: Phonopy configuration file for producing phonon dispersion (Step 6)  
+`mesh.conf`: Phonopy configuration file for producing phonon density of states and thermal properties (Step 6)  
+`preprocessing_phonopy_aims.py`: setting up multiple folders for force calculations  
 `run_multiple_jobs_aims.sh`: run multiple fhi-aims jobs in separate folders

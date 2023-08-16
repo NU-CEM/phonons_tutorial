@@ -12,7 +12,7 @@ Walkthrough for the ab-initio phonons tutorial at [TDEP 2023](https://liu.se/en/
 
 One of the strengths of the finite displacement method is that it is modular - so we can use various methods and tools for calculating the forces or post-processing results. In this case we use:
 - [phonopy](https://phonopy.github.io/phonopy/) to generate the supercell and build the force-constant tensor.
-- Density Functional Theory to relax the unit cell, calculate forces and calculate born effective charges. We give example input and output files for two popular electronic structure codes: [Vasp](https://www.vasp.at/) and [fhi-aims](https://fhi-aims.org/). The input files `INCAR` (vasp) and `control.in` (fhi-aims) provide a justification for the various calculation parameters used. For licensing reasons the `POTCAR` files required for VASP calculations cannot be provided.
+- Density Functional Theory to relax the unit cell, calculate forces and calculate born effective charges. We give example input and output files for two popular electronic structure codes: [vasp](https://www.vasp.at/) and [fhi-aims](https://fhi-aims.org/). The input files `INCAR` (vasp) and `control.in` (fhi-aims) provide a justification for the various calculation parameters used. For licensing reasons the `POTCAR` files required for Vasp calculations cannot be provided.
 - [sumo](https://smtg-ucl.github.io/sumo/) to produce a publication-ready plot.
 
 We also provide example input and output for [fhi-vibes](https://vibes-developers.gitlab.io/vibes/), which automates much of the process by combining many of the steps above into a single workflow. 

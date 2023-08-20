@@ -1,0 +1,13 @@
+# CdTe Born Effective Charges calculation
+
+PREC = Accurate    # increase FFT grid size
+IBRION = -1        # Don't update ions 
+NELMIN = 5         # force multiple SCF steps
+ENCUT = 600        # accurate forces
+EDIFF = 1e-08      # tight SCF criteria
+ISMEAR = 0         # for semiconductor with large cell
+SIGMA = 0.001      # for semiconductor with large cell
+LREAL = .FALSE.    # Required for accurate forces
+LWAVE = .FALSE.    # Dont print large file
+LCHARG = .FALSE.   # Dont print large file
+LEPSILON = .TRUE.  # Calculate Born effective charges via DFPT

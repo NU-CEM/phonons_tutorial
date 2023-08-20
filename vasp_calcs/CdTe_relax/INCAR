@@ -1,0 +1,12 @@
+GGA = PS           # PBEsol functional is sensible choice for accurate forces across several materials
+EDIFF = 1.0e-08    # tight SCF convergence criteria for accurate forces
+ENCUT = 600        # typically in range 500-800
+ADDGRID = True
+EDIFFG = -0.005    # tight force convergence criteria
+PREC = Accurate
+NSW = 100
+IBRION = 1
+ISIF = 3
+NELMIN = 5
+LWAVE = FALSE
+LCHARG = FALSE

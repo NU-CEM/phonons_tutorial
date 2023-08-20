@@ -1,0 +1,14 @@
+# Finite displacement force calculations for CdTe harmonic phonons
+# Note that default is NSW=0 (no ionic relaxation) and this should not be changed
+
+GGA = PS           # PBEsol functional is sensible choice for accurate forces across several materials
+EDIFF = 1.0e-08    # tight SCF convergence criteria for accurate forces
+ENCUT = 600        # typically in range 500-800
+LREAL = .FALSE.    # important for accurate forces
+ADDGRID = .TRUE.   # not essential but also not too costly to add
+PREC = Accurate    # increase FFT grids
+ISMEAR = 0         # override the default which is not suitable for semiconductor
+SIGMA  = 0.01      # ISMEAR=0 with small SIGMA for larger cells; this is small cell but for consistency later
+LCHARG = .FALSE.   # prevent printing large file
+LWAVE = .FALSE.    # prevent printing large file
+

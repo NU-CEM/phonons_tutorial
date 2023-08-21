@@ -29,7 +29,7 @@ We also provide example input and output for [fhi-vibes](https://vibes-developer
 ### Resources
 
 - Associated powerpoint presentation [here]().
-- fhi-aims walkthrough video [here]().
+- fhi-aims walkthrough video [here](https://vimeo.com/856334179?share=copy).
 
 ### Following the tutorial
 
@@ -57,3 +57,4 @@ For those who may not be able to run the electronic structure calculations we pr
 `mesh.conf`: Phonopy configuration file for producing phonon density of states and thermal properties (Step 6)  
 `preprocessing_phonopy_aims.py`: setting up multiple folders for force calculations  
 `run_multiple_jobs_aims.sh`: run multiple fhi-aims jobs in separate folders
+

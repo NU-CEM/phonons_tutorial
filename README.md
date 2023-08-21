@@ -47,6 +47,8 @@ For those who may not be able to run the electronic structure calculations we pr
 
 `CdTe_dielectric` (Step 5): Input and output files to calculate the "ion-clamped" high-frequency dielectric tensor	$\epsilon_\infty$.
 
+*Note:* for vasp the Born effective charges and high-frequency dielectric tensor are extracted from a single calculation.
+
 `CdTe_harmonic_vibes` (FHI-aims only): Input and output files for calculating a phonon dispersion using fhi-vibes, which combines many of the steps above into a single workflow.
 
 ### Other configuration files and scripts 

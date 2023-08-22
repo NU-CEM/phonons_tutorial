@@ -1,6 +1,6 @@
 # Ab-initio phonons walkthrough
 
-Walkthrough for the ab-initio phonons tutorial at [TDEP 2023](https://liu.se/en/research/tdep2023) (Linkoping, Sweden). This walkthrough covers your "every-day" finite-displacement phonon calculation, which can be split into the following steps:
+Walkthrough for the ab-initio phonons tutorial at [TDEP 2023](https://liu.se/en/research/tdep2023) (Linkoping, Sweden). This walkthrough covers your "every-day" finite-displacement harmonic phonon calculation, which can be split into the following steps:
 
 1. Relax unit cell (see folder `CdTe_relax`)
 2. Build supercell and generate displacements (e.g. `phonopy -d --dim="2 2 2" --aims`)
@@ -28,7 +28,7 @@ We also provide example input and output for [fhi-vibes](https://vibes-developer
 
 ### Resources
 
-- Associated powerpoint presentation [here]().
+- Associated pdf presentation [here](https://speakerdeck.com/lucydot/first-principles-lattice-dynamics).
 - fhi-aims walkthrough video [here](https://vimeo.com/856334179?share=copy).
 
 ### Following the tutorial
